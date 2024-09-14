@@ -1,11 +1,11 @@
 import java.util.Scanner;
-public class Siakad15 {
+public class Siakad15 { 
     public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);  
     String nama, nim;
     char kelas;
     byte absen;
-    double nilaiKuis, nilaiTugas, nilaiUjian, nilaiAkhir;
+    double nilaiKuis, nilaiTugas, nilaiUas, nilaiUts, nilaiAkhir;
     System.out.print("Masukkan nama: ");
     nama = sc.nextLine();
     System.out.print("Masukkan Nim: ");
@@ -18,9 +18,11 @@ public class Siakad15 {
     nilaiKuis = sc.nextDouble();
     System.out.print("Masukkan nilai tugas: ");
     nilaiTugas = sc.nextDouble();
-    System.out.print("Masukkan nilai ujian: ");
-    nilaiUjian = sc.nextDouble();
-    nilaiAkhir = (nilaiKuis + nilaiTugas + nilaiUjian) / 3;
+    System.out.print("Masukkan nilai Uas: ");
+    nilaiUas = sc.nextDouble();
+    System.out.print("Masukkan nilai Uts: ");
+    nilaiUts = sc.nextDouble();
+    nilaiAkhir = (nilaiKuis * 0.20) + (nilaiTugas * 0.15) + (nilaiUas * 0.35) + (nilaiUts * 0.30);
     System.out.println("Nama: " + nama + " NIM: " + nim);
     System.out.println("Kelas: " + kelas + " Absen: " + absen);
     System.out.println("Nilai Akhir: " + nilaiAkhir);
